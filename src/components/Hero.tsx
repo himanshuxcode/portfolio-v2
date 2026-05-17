@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiTwitter, FiArrowDown } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiArrowDown } from "react-icons/fi";
 import { personalInfo } from "@/data/portfolio";
 
 export default function Hero() {
@@ -43,7 +43,7 @@ export default function Hero() {
           className="mb-6"
         >
           <span className="inline-block px-4 py-1.5 text-sm font-medium rounded-full border border-indigo-500/30 text-indigo-400 bg-indigo-500/10">
-            Available for opportunities
+            Open to backend / SDE roles
           </span>
         </motion.div>
 
@@ -85,7 +85,7 @@ export default function Hero() {
           {[
             { icon: FiGithub, href: personalInfo.github, label: "GitHub" },
             { icon: FiLinkedin, href: personalInfo.linkedin, label: "LinkedIn" },
-            { icon: FiTwitter, href: personalInfo.twitter, label: "Twitter" },
+            { icon: FiMail, href: `mailto:${personalInfo.email}`, label: "Email" },
           ].map(({ icon: Icon, href, label }) => (
             <motion.a
               key={label}

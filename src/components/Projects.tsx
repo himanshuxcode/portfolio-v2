@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { FiGithub, FiExternalLink, FiLock } from "react-icons/fi";
 import { projects } from "@/data/portfolio";
 
 export default function Projects() {
@@ -73,16 +73,23 @@ export default function Projects() {
                     ))}
                   </div>
                   <div className="flex items-center gap-4">
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
-                    >
-                      <FiGithub size={18} />
-                      Code
-                    </motion.a>
+                    {project.github ? (
+                      <motion.a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+                      >
+                        <FiGithub size={18} />
+                        Code
+                      </motion.a>
+                    ) : (
+                      <span className="flex items-center gap-2 text-sm text-gray-600">
+                        <FiLock size={16} />
+                        Private / internal
+                      </span>
+                    )}
                     {project.live && (
                       <motion.a
                         href={project.live}
