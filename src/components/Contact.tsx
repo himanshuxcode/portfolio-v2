@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { FiMail, FiMapPin, FiSend, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiMail, FiMapPin, FiSend, FiGithub, FiLinkedin } from "react-icons/fi";
 import { personalInfo } from "@/data/portfolio";
 
 export default function Contact() {
@@ -34,8 +34,9 @@ export default function Contact() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full mx-auto mb-6" />
           <p className="text-gray-400 max-w-lg mx-auto">
-            Have a project in mind or just want to chat? I&apos;d love to hear from you.
-            Drop me a message and I&apos;ll get back to you as soon as possible.
+            If you&apos;re working on something thoughtful, or just want to talk
+            backends, reliability, or what you&apos;re building — I&apos;d genuinely
+            like to hear from you. I read every message and reply properly.
           </p>
         </motion.div>
 
@@ -71,7 +72,7 @@ export default function Contact() {
               {[
                 { icon: FiGithub, href: personalInfo.github },
                 { icon: FiLinkedin, href: personalInfo.linkedin },
-                { icon: FiTwitter, href: personalInfo.twitter },
+                { icon: FiMail, href: `mailto:${personalInfo.email}` },
               ].map(({ icon: Icon, href }) => (
                 <motion.a
                   key={href}
@@ -120,7 +121,7 @@ export default function Contact() {
               <input
                 type="text"
                 required
-                placeholder="Project Collaboration"
+                placeholder="What's this about?"
                 className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-indigo-500/50 transition-colors"
               />
             </div>
@@ -129,7 +130,7 @@ export default function Contact() {
               <textarea
                 rows={4}
                 required
-                placeholder="Tell me about your project..."
+                placeholder="Tell me what you're building, or what you'd like to talk about..."
                 className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-indigo-500/50 transition-colors resize-none"
               />
             </div>

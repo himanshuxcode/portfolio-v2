@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Himanshu Titoria | Software Engineer",
+  title: "Himanshu Titoria | Software Development Engineer",
   description:
-    "Full-Stack Software Engineer specializing in React, Node.js, and cloud-native architectures. View my portfolio, projects, and experience.",
+    "Backend-focused Software Development Engineer working on reliable booking and payments systems with Python, Django, FastAPI and PostgreSQL. Projects, experience, and how to reach me.",
 };
 
 export default function RootLayout({

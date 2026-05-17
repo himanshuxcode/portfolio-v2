@@ -2,13 +2,13 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { FiMapPin, FiCode, FiCoffee, FiHeart } from "react-icons/fi";
-import { personalInfo } from "@/data/portfolio";
+import { FiMapPin, FiCode, FiAward, FiBookOpen } from "react-icons/fi";
+import { personalInfo, education } from "@/data/portfolio";
 
 const stats = [
-  { label: "Years Experience", value: "5+", icon: FiCode },
-  { label: "Projects Shipped", value: "30+", icon: FiCoffee },
-  { label: "Open Source Contributions", value: "120+", icon: FiHeart },
+  { label: "DSA problems solved", value: "250+", icon: FiCode },
+  { label: "GATE 2025 (CS)", value: "Qualified", icon: FiAward },
+  { label: education.degree, value: "B.Tech", icon: FiBookOpen },
 ];
 
 export default function About() {

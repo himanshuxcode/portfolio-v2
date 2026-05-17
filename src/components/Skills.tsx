@@ -2,11 +2,11 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { FiMonitor, FiServer, FiDatabase, FiCloud } from "react-icons/fi";
+import { FiCode, FiServer, FiDatabase, FiCloud } from "react-icons/fi";
 import { skills } from "@/data/portfolio";
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
-  frontend: FiMonitor,
+  code: FiCode,
   backend: FiServer,
   database: FiDatabase,
   cloud: FiCloud,
@@ -33,7 +33,7 @@ export default function Skills() {
 
         <div className="grid sm:grid-cols-2 gap-6">
           {skills.map((skill, i) => {
-            const Icon = iconMap[skill.icon] || FiMonitor;
+            const Icon = iconMap[skill.icon] || FiCode;
             return (
               <motion.div
                 key={skill.category}
